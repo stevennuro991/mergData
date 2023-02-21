@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background = "@color/primary_color"
+    android:padding="20dp">
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_started_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:text="@string/started_title"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="36sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layoout_constraintEnd_toEndOf = "parent"-->
+<!--        app:layoout_constraintStart_toStartOf="parent"-->
+<!--        app:layoout_constraintTop_toTopOf = "parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_started_sub_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:lineHeight="20sp"-->
+<!--        android:text="@string/started_sub_title"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="14sp"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="16dp"-->
+<!--        tools:layout_editor_absoluteY="68dp"-->
+<!--        tools:targetApi="p" />-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/welcome"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:contentDescription="TODO" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_register"
+        android:layout_marginTop="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_register2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Second Form"
+        android:layout_marginTop="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

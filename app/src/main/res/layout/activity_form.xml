@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_form_title"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fill_the_form"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_username"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_form_title"
+        app:startIconDrawable="@drawable/ic_circle_account"
+        tools:layout_editor_absoluteX="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="#00796B"
+            tools:ignore="TextContrastCheck" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_location"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:hint="@string/enter_your_location"
+        app:layout_constraintTop_toBottomOf="@+id/tv_form_title"
+        app:startIconDrawable="@drawable/ic_lock"
+        tools:layout_editor_absoluteX="44dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_location"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="#00796B"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/gender_title"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/gender"
+        app:layout_constraintTop_toBottomOf="@+id/til_location"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_title"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/maleRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/femaleRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+
+        <RadioButton
+            android:id="@+id/otherRadioButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="@string/non_binary" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_birth"
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/place_of_birth"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+        app:startIconDrawable="@drawable/ic_account"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_birth"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="#00796B"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/work_title"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/birth"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_birth" />
+
+    <RadioGroup
+        android:id="@+id/workRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/work_title">
+
+        <RadioButton
+            android:id="@+id/yesRadioButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/yes" />
+
+        <RadioButton
+            android:id="@+id/NoRadioButton"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:text="@string/no" />
+
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_form"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workRadioGroup"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
